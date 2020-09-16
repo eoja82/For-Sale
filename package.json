@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "npx gatsby build",
+    "develop": "npx gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -15,8 +15,12 @@
   },
   "dependencies": {
     "gatsby": "^2.24.54",
+    "gatsby-plugin-react-helmet": "^3.3.11",
+    "gatsby-source-filesystem": "^2.3.29",
+    "gatsby-transformer-json": "^2.4.12",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "prettier": "2.1.1"
