@@ -1,0 +1,21 @@
+#contactContainer {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: black;
+  width: 100%;
+  padding: .5rem 0 .5rem 1rem;
+}
+.contactIcon {
+  font-size: 1.5rem;
+  margin-right: .75rem;
+  color: rgb(9, 238, 207);
+}
+.contact {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-right: 1.25rem;
+}
