@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react"
-import { graphql } from "gatsby";
+import { graphql } from "gatsby"
 import styles from "./listing.module.css"
+import Contact from "../components/contact.js"
 
 let imageIndex = 0
 
@@ -40,9 +41,9 @@ export default ({ data }) => {
 
   return (
     <div>
-      {/* <h1>{data.dataJson.title}</h1> */}
+      <Contact />
       <div className={styles.container}>
-        <h1>{data.dataJson.title} - {data.dataJson.price}</h1>
+        <h1 id={styles.title}>{data.dataJson.title} - {data.dataJson.price}</h1>
         <img className={styles.mainImage} src={image.src} alt={image.alt} onClick={openImgModal}></img>
         <div id={styles.thumbnailContainer}>
           {images.map( (x, i) => (
@@ -51,19 +52,17 @@ export default ({ data }) => {
             </div>
           ))}
         </div>
-          <p id={styles.description}>{data.dataJson.description}</p>
-          {/* modal images */}
-          <div id={styles.imgModalContainer} ref={imgModal}>
+        <p id={styles.description}>{data.dataJson.description}</p>
+        {/* modal images */}
+        <div id={styles.imgModalContainer} ref={imgModal}>
+          <div className={styles.modalContent}>
             <span className={styles.closeModal} onClick={closeImgModal}>&times;</span>
-            <div className={styles.modalContent}>
-              <div className={styles.imgNumber}>
-                Image {imgNumber} of {numImages}
-              </div>
-              <img className={styles.modalImg} src={image.src} alt={image.alt}></img>
-              <a className={styles.previousImg} onClick={previousSlide}>&#10094;</a>
-              <a className={styles.nextImage} onClick={nextSlide}>&#10095;</a>
-            </div>
+            <div className={styles.imgNumber}>Image {imgNumber} of {numImages}</div>
+            <img className={styles.modalImg} src={image.src} alt={image.alt}></img>
+            <a className={styles.previousImg} onClick={previousSlide}>&#10094;</a>
+            <a className={styles.nextImage} onClick={nextSlide}>&#10095;</a>
           </div>
+        </div>
       </div>
     </div>
   )
