@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  /* pathPrefix: "/", */
+  pathPrefix: "/for-sale/",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
