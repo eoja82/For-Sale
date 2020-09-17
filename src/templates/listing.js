@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react"
-import { graphql } from "gatsby"
+import { graphql, withPrefix } from "gatsby"
 import styles from "./listing.module.css"
 import Contact from "../components/contact.js"
 
@@ -44,11 +44,11 @@ export default ({ data }) => {
       <Contact />
       <div className={styles.container}>
         <h1 id={styles.title}>{data.dataJson.title} - {data.dataJson.price}</h1>
-        <img className={styles.mainImage} src={image.src} alt={image.alt} onClick={openImgModal}></img>
+        <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt} onClick={openImgModal}></img>
         <div id={styles.thumbnailContainer}>
           {images.map( (x, i) => (
             <div className={styles.thumbnailDiv} key={`image${i}`}>
-              <img className={styles.thumbnail} src={x.src} alt={x.alt} data-img-index={i} onClick={updateMainImage} onMouseEnter={updateMainImage}></img>
+              <img className={styles.thumbnail} src={withPrefix(x.src)} alt={x.alt} data-img-index={i} onClick={updateMainImage} onMouseEnter={updateMainImage}></img>
             </div>
           ))}
         </div>
@@ -58,7 +58,7 @@ export default ({ data }) => {
           <div className={styles.modalContent}>
             <span className={styles.closeModal} onClick={closeImgModal}>&times;</span>
             <div className={styles.imgNumber}>Image {imgNumber} of {numImages}</div>
-            <img className={styles.modalImg} src={image.src} alt={image.alt}></img>
+            <img className={styles.modalImg} src={withPrefix(image.src)} alt={image.alt}></img>
             <a className={styles.previousImg} onClick={previousSlide}>&#10094;</a>
             <a className={styles.nextImage} onClick={nextSlide}>&#10095;</a>
           </div>
