@@ -41,12 +41,10 @@ class Index extends React.Component {
   constructor(props) {
     super(props)
   }
-
-
   render() {
     return (
       <div>
-        <h1 id={styles.header}>Reloading Equipment For Sale</h1>
+        <h1 id={styles.header}>My Stuff For Sale</h1>
         <Listings />
       </div>
       

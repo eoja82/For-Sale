@@ -17,10 +17,6 @@
   border: 1px solid rgb(184, 184, 184);
   box-shadow: 3px 3px 5px rgb(184, 184, 184);
 }
-/* .listing:hover {
-  border: 2px solid rgb(5, 126, 238);
-  box-shadow: 3px 3px 3px rgb(5, 126, 238);
-} */
 .listingLink {
   max-width: 100%;
   max-height: 100%;
