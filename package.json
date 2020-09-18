@@ -15,17 +15,17 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "gatsby": "^2.24.54",
+    "gatsby": "^2.24.63",
     "gatsby-plugin-react-helmet": "^3.3.11",
-    "gatsby-source-filesystem": "^2.3.29",
+    "gatsby-source-filesystem": "^2.3.30",
     "gatsby-transformer-json": "^2.4.12",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
-    "prettier": "2.1.1"
+    "prettier": "^2.1.1"
   },
   "repository": {
     "type": "git",
