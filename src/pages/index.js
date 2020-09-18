@@ -45,6 +45,7 @@ class Index extends React.Component {
       <div>
         <h1 id={styles.header}>My Stuff For Sale</h1>
         <Listings />
+        <img src={withPrefix("/img/scale_1.jpg")} width="600" height="450"></img>
       </div>
       
     )
