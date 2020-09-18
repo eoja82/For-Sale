@@ -1,0 +1,9 @@
+{
+  "slug": "/land/",
+  "title": "Land For Sale",
+  "description": "Experience breath taking views everyday with your own piece of land.",
+  "price": "$200,000",
+  "images": [{"src": "/img/land_1.jpg", "alt": "land"}, 
+              {"src": "/img/land_2.jpg", "alt": "land"},
+              {"src": "/img/land_3.jpg", "alt": "land"}]
+}

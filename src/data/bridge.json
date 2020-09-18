@@ -1,0 +1,9 @@
+{
+  "slug": "/bridges/",
+  "title": "Bridges For Sale",
+  "description": "Beautiful bridges for sale.  Used, in excellent condition.",
+  "price": "$100,000",
+  "images": [{"src": "/img/bridge_1.jpg", "alt": "bridge"}, 
+              {"src": "/img/bridge_2.jpg", "alt": "bridge"},
+              {"src": "/img/bridge_3.jpg", "alt": "bridge"}]
+}
