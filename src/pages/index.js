@@ -1,7 +1,6 @@
 import React from "react"
 import styles from "./styles/index.module.css"
-import { withPrefix } from "gatsby"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql, Link, withPrefix } from "gatsby"
 
 let Listings = () => {
   const data = useStaticQuery(graphql`
@@ -27,7 +26,7 @@ let Listings = () => {
       {listings.map ( x => (
         <div className={styles.listing}>
           <Link to={x.slug} key={x.slug} className={styles.listingLink}>
-            {<img className={styles.thumbnail} src={withPrefix(x.images[0].src)} alt={x.alt} />}
+            {<img className={styles.thumbnail} src={withPrefix(x.images[0].src)} alt={x.images[0].alt} />}
             <h3 className={styles.listingTitle}>{x.title} {x.price}</h3>
           </Link>
         </div>
