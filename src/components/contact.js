@@ -17,13 +17,13 @@ export default () => {
       </Helmet>
         <div id={styles.contactContainer}>
           <div>
-            <a className={styles.contactIcon} href="tel:1-555-555-5555" aria-label="Phone Number"><i class="fa fa-phone"></i></a>
-            <a className={styles.contactIcon} href="sms:1-555-555-5555" aria-label="Text Number"><i class="fa fa-comment"></i></a>
-            <a className={styles.contact} href="tel:1-555-555-5555">555-555-5555</a>
+            <a className={styles.contactIcon} href="tel:1-651-492-0437" aria-label="Phone Number"><i class="fa fa-phone"></i></a>
+            <a className={styles.contactIcon} href="sms:1-651-492-0437" aria-label="Text Number"><i class="fa fa-comment"></i></a>
+            <a className={styles.contact} href="tel:1-651-492-0437">651-492-0437</a>
           </div>
           <div>
-            <a className={styles.contactIcon} href="mailto:fake@email.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
-            <a className={styles.contact} href="mailto:fake@email.com">fake@email.com</a>
+            <a className={styles.contactIcon} href="mailto:erik-oja@outlook.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+            <a className={styles.contact} href="mailto:erik-oja@outlook.com">erik-oja@outlook.com</a>
           </div>
         </div>
     </div>
