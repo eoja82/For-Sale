@@ -43,7 +43,7 @@ export default ({ data }) => {
     <div>
       <Contact />
       <div className={styles.container}>
-        <a href="/" id={styles.homeLink}>Home</a>
+        <a href={withPrefix("/")} id={styles.homeLink}>Home</a>
         <h1 id={styles.title}>{data.dataJson.title} - {data.dataJson.price}</h1>
         <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt} onClick={openImgModal}></img>
         <div id={styles.thumbnailContainer}>
