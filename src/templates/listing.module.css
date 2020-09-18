@@ -99,6 +99,7 @@ body {
   font-size: 25px;
   font-weight: bold;
   line-height: .95;
+  z-index: 10;
 }
 .modalImg {
   display: flex;
@@ -116,7 +117,7 @@ body {
   padding: var(--controls-padding);
   margin-top: var(--controls-margin-top);
   color: black;
-  background-color: rgba(240, 240, 240, 0.3);
+  background-color: rgba(240, 240, 240, 0.5);
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
