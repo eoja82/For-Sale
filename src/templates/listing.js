@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react"
-import { graphql, withPrefix } from "gatsby"
+import { graphql, withPrefix, Link } from "gatsby"
 import styles from "./listing.module.css"
 import Contact from "../components/contact.js"
 
@@ -43,7 +43,7 @@ export default ({ data }) => {
     <div>
       <Contact />
       <div className={styles.container}>
-        <a href={withPrefix("/")} id={styles.homeLink}>Home</a>
+        <Link to="/">Home</Link>
         <h1 id={styles.title}>{data.dataJson.title} - {data.dataJson.price}</h1>
         <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt} onClick={openImgModal}></img>
         <div id={styles.thumbnailContainer}>
