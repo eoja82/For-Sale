@@ -19,7 +19,7 @@ let Listings = () => {
       }
     }
   `)
-  console.log(data.allDataJson.nodes)
+  
   let listings = data.allDataJson.nodes
   return (
     <div id={styles.listings}>
@@ -46,7 +46,6 @@ class Index extends React.Component {
         <h1 id={styles.header}>My Stuff For Sale</h1>
         <Listings />
       </div>
-      
     )
   }
 }
