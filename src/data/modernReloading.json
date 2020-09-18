@@ -3,7 +3,7 @@
   "title": "Modern Reloading by Richard Lee",
   "description": "Modern Reloading by Richard Lee.  In like new condition.",
   "price": "$20.00",
-  "images": [{"src": "/img/modern_reloading_1.jpg", "alt": "front of book"}, 
-              {"src": "/img/modern_reloading_2.jpg", "alt": "back of book"},
-              {"src": "/img/modern_reloading_3.jpg", "alt": "inside of book"}]
+  "images": [{"src": "/img/modern_reloading_1.JPG", "alt": "front of book"}, 
+              {"src": "/img/modern_reloading_2.JPG", "alt": "back of book"},
+              {"src": "/img/modern_reloading_3.JPG", "alt": "inside of book"}]
 }
