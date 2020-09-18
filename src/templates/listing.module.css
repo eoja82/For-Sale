@@ -98,6 +98,7 @@ body {
   border-radius: 50%;
   font-size: 25px;
   font-weight: bold;
+  line-height: .95;
 }
 .modalImg {
   display: flex;
