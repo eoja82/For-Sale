@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./styles/index.module.css"
-import { useStaticQuery, graphql, Link, withPrefix } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import { withPrefix } from "gatsby"
 
 let Listings = () => {
   const data = useStaticQuery(graphql`
@@ -45,7 +46,7 @@ class Index extends React.Component {
       <div>
         <h1 id={styles.header}>My Stuff For Sale</h1>
         <Listings />
-        <img src={withPrefix("/img/scale_1.jpg")} width="600" height="450"></img>
+        <img src={withPrefix("/img/scale_1.jpg")} width="600" height="450" alt="test image"></img>
       </div>
       
     )
