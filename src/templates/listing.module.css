@@ -33,10 +33,19 @@ body {
   margin: 45px auto;
   padding: .75rem
 }
+#mainImageContainer {
+  width: var(--main-image-width);
+  height: var(--main-image-height);
+  background-color: rgb(240, 240, 240);
+  margin-bottom: .3rem;
+}
 .mainImage {
   cursor: zoom-in;
-  max-width: var(--main-image-width);
-  max-height: var(--main-image-height);
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  justify-content: center;
 }
 #description {
   font-size: 1.25rem;

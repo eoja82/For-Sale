@@ -45,7 +45,9 @@ export default ({ data }) => {
       <div className={styles.container}>
         <Link to="/">Home</Link>
         <h1 id={styles.title}>{data.dataJson.title} - {data.dataJson.price}</h1>
-        <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt} onClick={openImgModal}></img>
+        <div id={styles.mainImageContainer}>
+          <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt} onClick={openImgModal}></img>
+        </div>
         <div id={styles.thumbnailContainer}>
           {images.map( (x, i) => (
             <div className={styles.thumbnailDiv} key={`image${i}`}>
