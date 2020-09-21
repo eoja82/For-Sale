@@ -1,4 +1,5 @@
 :root {
+  --container-margin: 45px auto;
   --modal-content-width: 800px;
   --modal-content-height: 600px;
   --main-image-width: 600px;
@@ -6,15 +7,25 @@
   --container-max-width: 80%;
   --controls-margin-top: -50px;
   --controls-padding: 16px;
+  --imgNumber-padding: 8px 0;
 }
 @media only screen and (max-width: 770px) {
   :root {
-    --modal-content-width: 600px;
-    --modal-content-height: 450px;
+    --modal-content-width: 500px;
+    --modal-content-height: 375px;
+    --main-image-width: 500px;
+    --main-image-height: 375px;
   }
 }
-@media only screen and (max-width: 440px) {
+@media only screen and (max-height: 415px) {
   :root {
+    --modal-content-width: 467px;
+    --modal-content-height: 350px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  :root {
+    --container-margin: 65px auto;
     --modal-content-width: 300px;
     --modal-content-height: 225px;
     --main-image-width: 300px;
@@ -22,6 +33,7 @@
     --container-max-width: 100%;
     --controls-margin-top: -35px;
     --controls-padding: 8px;
+    --imgNumber-padding: 4px 0;
   }
 }
 body {
@@ -30,10 +42,11 @@ body {
 }
 .container {
   max-width: var(--container-max-width);
-  margin: 45px auto;
+  margin: var(--container-margin);
   padding: .75rem
 }
 #mainImageContainer {
+  position: relative;
   width: var(--main-image-width);
   height: var(--main-image-height);
   background-color: rgb(240, 240, 240);
@@ -96,7 +109,7 @@ body {
 .closeModal {
   cursor: pointer;
   text-align: center;
-  background-color: white;
+  background-color: rgb(240, 240, 240);
   color: black;
   position: absolute;
   width: 25px;
@@ -141,11 +154,19 @@ body {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+.mainControl {
+  visibility: hidden;
+}
+@media (hover: hover) {
+  #mainImageContainer:hover .mainControl {
+    visibility: visible;
+  }
+}
 .imgNumber {
   text-align: center;
   color: black;
   font-size: .9rem;
-  padding: 8px 0;
+  padding: var(--imgNumber-padding);
   background-color: rgb(240, 240, 240, .5);
   position: absolute;
   top: 0;
