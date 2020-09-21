@@ -25,11 +25,8 @@ export default ({ data }) => {
     setImageNumber(imageIndex + 1)
   }
   function nextSlide() {
-    console.log("pre " + imageIndex)
     imageIndex++
-    console.log(imageIndex)
     if (imageIndex > numImages - 1) imageIndex = 0
-    console.log("imageIndex now " + imageIndex)
     setImage(images[imageIndex])
     setImageNumber(imageIndex + 1)
   }
@@ -46,7 +43,10 @@ export default ({ data }) => {
         <Link to="/">Home</Link>
         <h1 id={styles.title}>{data.dataJson.title} - {data.dataJson.price}</h1>
         <div id={styles.mainImageContainer}>
+          <div className={styles.imgNumber}>Image {imgNumber} of {numImages}</div>
           <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt} onClick={openImgModal}></img>
+          <a className={`${styles.previousImg} ${styles.mainControl}`} onClick={previousSlide}>&#10094;</a>
+          <a className={`${styles.nextImage} ${styles.mainControl}`} onClick={nextSlide}>&#10095;</a>
         </div>
         <div id={styles.thumbnailContainer}>
           {images.map( (x, i) => (
