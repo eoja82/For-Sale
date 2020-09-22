@@ -3,7 +3,9 @@
   "title": "Cars For Sale",
   "description": "Turn heads in a fantastic new car!",
   "price": "$50,000",
-  "images": [{"src": "/img/car_1.jpg", "alt": "car"}, 
+  "images": [
+              {"src": "/img/car_1.jpg", "alt": "car"}, 
               {"src": "/img/car_2.jpg", "alt": "car"},
-              {"src": "/img/car_3.jpg", "alt": "car"}]
+              {"src": "/img/car_3.jpg", "alt": "car"}
+            ]
 }
