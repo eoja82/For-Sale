@@ -1,0 +1,12 @@
+:root {
+  --notFound-max-width: 75%;
+}
+@media only screen and (max-width: 440px) {
+  :root {
+    --notFound-max-width: 90%;
+  }
+}
+.notFoundContainer {
+  max-width: var(--notFound-max-width);
+  margin: 0 auto;
+}
