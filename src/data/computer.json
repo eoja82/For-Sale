@@ -1,0 +1,11 @@
+{
+  "slug": "/computer/",
+  "title": "Computer For Sale",
+  "description": "This computer is super fast.  Dog not included.",
+  "price": "$800",
+  "images": [
+              {"src": "/img/computer_1.jpg", "alt": "computer"}, 
+              {"src": "/img/computer_2.jpg", "alt": "computer"},
+              {"src": "/img/computer_3.jpg", "alt": "computer"}
+            ]
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "/pets/",
+  "title": "Pets For Adoption",
+  "description": "Bring joy into your life with a new pet.",
+  "price": "$100",
+  "images": [
+              {"src": "/img/pet_1.jpg", "alt": "cat"}, 
+              {"src": "/img/pet_2.jpg", "alt": "rodent"},
+              {"src": "/img/pet_3.jpg", "alt": "antelope"}
+            ]
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "/vacation/",
+  "title": "Vacation For Sale",
+  "description": "You really need a vacation.",
+  "price": "$500",
+  "images": [
+              {"src": "/img/vacation_1.jpg", "alt": "beach"}, 
+              {"src": "/img/vacation_2.jpg", "alt": "beach"},
+              {"src": "/img/vacation_3.jpg", "alt": "beach"}
+            ]
+}
