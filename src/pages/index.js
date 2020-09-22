@@ -24,8 +24,8 @@ let Listings = () => {
   let listings = data.allDataJson.nodes
   return (
     <div id={styles.listings}>
-      {listings.map ( x => (
-        <div className={styles.listing}>
+      {listings.map ( (x, i) => (
+        <div className={styles.listing} key={`${x.slug}_${i}`}>
           <Link to={x.slug} key={x.slug} className={styles.listingLink}>
             {<img className={styles.thumbnail} src={withPrefix(x.images[0].src)} alt={x.images[0].alt} />}
             <h3 className={styles.listingTitle}>{x.title} {x.price}</h3>
