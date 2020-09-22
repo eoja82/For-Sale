@@ -52,13 +52,19 @@ body {
   background-color: rgb(240, 240, 240);
   margin-bottom: .3rem;
 }
+.mainImageBtn {
+  display: flex;
+  width: var(--main-image-width);
+  height: var(--main-image-height);
+  border: none;
+  padding: 0;
+  justify-content: center;
+  align-items: flex-start;
+}
 .mainImage {
   cursor: zoom-in;
-  display: flex;
   max-width: 100%;
   max-height: 100%;
-  margin: 0 auto;
-  justify-content: center;
 }
 #description {
   font-size: 1.25rem;
@@ -69,11 +75,14 @@ body {
   flex-wrap: wrap;
   max-width: 100%;
 }
-.thumbnailDiv {
+.thumbnailBtn {
   background-color: rgb(240, 240, 240);
   width: 80px;
   height: 60px;
   margin-right: .2rem;
+  margin-bottom: .2rem;
+  border: none;
+  padding: 0;
 }
 .thumbnail {
   cursor: pointer;
@@ -142,7 +151,7 @@ body {
   background-color: rgba(240, 240, 240, 0.5);
   font-weight: bold;
   font-size: 20px;
-  transition: 0.6s ease;
+  border: none;
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;

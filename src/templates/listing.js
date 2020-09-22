@@ -44,26 +44,28 @@ export default ({ data }) => {
         <h1 id={styles.title}>{data.dataJson.title} - {data.dataJson.price}</h1>
         <div id={styles.mainImageContainer}>
           <div className={styles.imgNumber}>Image {imgNumber} of {numImages}</div>
-          <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt} onClick={openImgModal}></img>
-          <a className={`${styles.previousImg} ${styles.mainControl}`} onClick={previousSlide}>&#10094;</a>
-          <a className={`${styles.nextImage} ${styles.mainControl}`} onClick={nextSlide}>&#10095;</a>
+          <button className={styles.mainImageBtn} onClick={openImgModal}>
+            <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt}></img>
+          </button>
+          <button className={`${styles.previousImg} ${styles.mainControl}`} onClick={previousSlide}>&#10094;</button>
+          <button className={`${styles.nextImage} ${styles.mainControl}`} onClick={nextSlide}>&#10095;</button>
         </div>
         <div id={styles.thumbnailContainer}>
           {images.map( (x, i) => (
-            <div className={styles.thumbnailDiv} key={`image${i}`}>
-              <img className={styles.thumbnail} src={withPrefix(x.src)} alt={x.alt} data-img-index={i} onClick={updateMainImage} onMouseEnter={updateMainImage}></img>
-            </div>
+            <button className={styles.thumbnailBtn} key={`image${i}`} onClick={updateMainImage} onMouseEnter={updateMainImage} data-img-index={i}>
+              <img className={styles.thumbnail} src={withPrefix(x.src)} alt={x.alt} data-img-index={i}></img>
+            </button>
           ))}
         </div>
         <p id={styles.description}>{data.dataJson.description}</p>
         {/* modal images */}
         <div id={styles.imgModalContainer} ref={imgModal}>
           <div className={styles.modalContent}>
-            <span className={styles.closeModal} onClick={closeImgModal}>&times;</span>
+            <span className={styles.closeModal} onClick={closeImgModal} onKeyDown={closeImgModal} role="button" tabIndex={0}>&times;</span>
             <div className={styles.imgNumber}>Image {imgNumber} of {numImages}</div>
             <img className={styles.modalImg} src={withPrefix(image.src)} alt={image.alt}></img>
-            <a className={styles.previousImg} onClick={previousSlide}>&#10094;</a>
-            <a className={styles.nextImage} onClick={nextSlide}>&#10095;</a>
+            <button className={styles.previousImg} onClick={previousSlide}>&#10094;</button>
+            <button className={styles.nextImage} onClick={nextSlide}>&#10095;</button>
           </div>
         </div>
       </div>
