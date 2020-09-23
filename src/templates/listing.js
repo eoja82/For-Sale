@@ -45,7 +45,9 @@ export default ({ data }) => {
         <div id={styles.mainImageContainer}>
           <div className={styles.imgNumber}>Image {imgNumber} of {numImages}</div>
           <button className={styles.mainImageBtn} onClick={openImgModal}>
-            <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt}></img>
+            <div className={styles.mainImageWrapper}>
+              <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt}></img>
+            </div>
           </button>
           <button className={`${styles.previousImg} ${styles.mainControl}`} onClick={previousSlide}>&#10094;</button>
           <button className={`${styles.nextImage} ${styles.mainControl}`} onClick={nextSlide}>&#10095;</button>
