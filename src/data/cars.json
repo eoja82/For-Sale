@@ -6,6 +6,7 @@
   "images": [
               {"src": "/img/car_1.jpg", "alt": "car"}, 
               {"src": "/img/car_2.jpg", "alt": "car"},
-              {"src": "/img/car_3.jpg", "alt": "car"}
+              {"src": "/img/car_3.jpg", "alt": "car"},
+              {"src": "/img/tumbler - 2.jpeg", "alt": "tumbler"}
             ]
 }
