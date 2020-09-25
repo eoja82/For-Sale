@@ -6,4 +6,4 @@
 
 3.  Add any photos you need to /static/img, delete the rest.
 
-4.  Create a JSON file in /src/data for your item to list keeping the same format as the example files.  Delete the exapmle JSON files.
+4.  Create a JSON file in /src/data for each item to list keeping the same format as the example files.  Delete the exapmle JSON files.
