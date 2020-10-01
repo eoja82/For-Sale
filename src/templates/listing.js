@@ -11,7 +11,9 @@ export default ({ data }) => {
         imgModal = useRef(null),
         [image, setImage] = useState(images[imageIndex]),
         [imgNumber, setImageNumber] = useState(imageIndex + 1)
-  
+  let touchStartX = 0,
+      touchEndX = 0
+
   function openImgModal() {
     imgModal.current.style.display = "block"
   }
@@ -35,6 +37,17 @@ export default ({ data }) => {
     setImage(images[imageIndex])
     setImageNumber(imageIndex + 1)
   }
+  function touchStart(e) {
+    touchStartX = e.changedTouches[0].screenX
+  }
+  function touchEnd(e) {
+    touchEndX = e.changedTouches[0].screenX
+    handleGesture()
+  }
+  function handleGesture() {
+    if (touchEndX < touchStartX && Math.abs(touchEndX - touchStartX) > 20) nextSlide()
+    if (touchEndX > touchStartX && Math.abs(touchEndX - touchStartX) > 20) previousSlide()
+  }
 
   return (
     <div>
@@ -46,7 +59,7 @@ export default ({ data }) => {
           <div className={styles.imgNumber}>Image {imgNumber} of {numImages}</div>
           <button className={styles.mainImageBtn} onClick={openImgModal}>
             <div className={styles.mainImageWrapper}>
-              <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt}></img>
+              <img className={styles.mainImage} src={withPrefix(image.src)} alt={image.alt} onTouchStart={touchStart} onTouchEnd={touchEnd}></img>
             </div>
           </button>
           <button className={`${styles.previousImg} ${styles.mainControl}`} onClick={previousSlide}>&#10094;</button>
@@ -65,7 +78,7 @@ export default ({ data }) => {
           <div className={styles.modalContent}>
             <span className={styles.closeModal} onClick={closeImgModal} onKeyDown={closeImgModal} role="button" tabIndex={0}>&times;</span>
             <div className={styles.imgNumber}>Image {imgNumber} of {numImages}</div>
-            <img className={styles.modalImg} src={withPrefix(image.src)} alt={image.alt}></img>
+            <img className={styles.modalImg} src={withPrefix(image.src)} alt={image.alt} onTouchStart={touchStart} onTouchEnd={touchEnd}></img>
             <button className={styles.previousImg} onClick={previousSlide}>&#10094;</button>
             <button className={styles.nextImage} onClick={nextSlide}>&#10095;</button>
           </div>
