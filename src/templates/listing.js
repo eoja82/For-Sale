@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react"
 import { graphql, withPrefix, Link } from "gatsby"
-import styles from "./listing.module.css"
+import * as styles from "./listing.module.css"
 import Contact from "../components/contact.js"
 
 let imageIndex = 0

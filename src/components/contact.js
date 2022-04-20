@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import styles from "./contact.module.css"
+import * as styles from "./contact.module.css"
 
 export default () => {
   return (

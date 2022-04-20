@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./styles/index.module.css"
+import * as styles from "./styles/index.module.css"
 import { useStaticQuery, graphql, Link, withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
 

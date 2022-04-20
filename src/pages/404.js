@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./styles/404.module.css"
+import * as styles from "./styles/404.module.css"
 import { Link } from "gatsby"
 
 export default () => {
