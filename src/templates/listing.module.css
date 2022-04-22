@@ -49,7 +49,6 @@ body {
   position: relative;
   width: var(--main-image-width);
   height: var(--main-image-height);
-  background-color: rgb(240, 240, 240);
   margin-bottom: .3rem;
 }
 .mainImageBtn {
@@ -60,6 +59,7 @@ body {
 .mainImageWrapper {
   width: var(--main-image-width);
   height: var(--main-image-height);
+  background-color: white;
 }
 .mainImage {
   cursor: zoom-in;
@@ -76,7 +76,7 @@ body {
   max-width: 100%;
 }
 .thumbnailBtn {
-  background-color: rgb(240, 240, 240);
+  background-color: white;
   width: 80px;
   height: 60px;
   margin-right: .2rem;
@@ -104,7 +104,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.95);
 }
 .modalContent {
   position: relative;
