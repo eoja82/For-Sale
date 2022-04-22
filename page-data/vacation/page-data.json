@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-listing-js","path":"/vacation/","result":{"data":{"dataJson":{"description":"You really need a vacation.","images":[{"alt":"beach","src":"/img/vacation_1.jpg"},{"alt":"beach","src":"/img/vacation_2.jpg"},{"alt":"beach","src":"/img/vacation_3.jpg"}],"price":"$500","title":"Vacation For Sale","slug":"/vacation/"}},"pageContext":{"slug":"/vacation/"}},"staticQueryHashes":[]}
+{
+    "componentChunkName": "component---src-templates-listing-js",
+    "path": "/vacation/",
+    "result": {"data":{"dataJson":{"description":"You really need a vacation.","images":[{"alt":"beach","src":"/img/vacation_1.jpg"},{"alt":"beach","src":"/img/vacation_2.jpg"},{"alt":"beach","src":"/img/vacation_3.jpg"}],"price":"$500","title":"Vacation For Sale","slug":"/vacation/"}},"pageContext":{"slug":"/vacation/"}},
+    "staticQueryHashes": []}

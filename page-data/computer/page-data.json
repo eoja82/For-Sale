@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-listing-js","path":"/computer/","result":{"data":{"dataJson":{"description":"This computer is super fast.  Dog not included.","images":[{"alt":"computer","src":"/img/computer_1.jpg"},{"alt":"computer","src":"/img/computer_2.jpg"},{"alt":"computer","src":"/img/computer_3.jpg"}],"price":"$800","title":"Computer For Sale","slug":"/computer/"}},"pageContext":{"slug":"/computer/"}},"staticQueryHashes":[]}
+{
+    "componentChunkName": "component---src-templates-listing-js",
+    "path": "/computer/",
+    "result": {"data":{"dataJson":{"description":"This computer is super fast.  Dog not included.","images":[{"alt":"computer","src":"/img/computer_1.jpg"},{"alt":"computer","src":"/img/computer_2.jpg"},{"alt":"computer","src":"/img/computer_3.jpg"}],"price":"$800","title":"Computer For Sale","slug":"/computer/"}},"pageContext":{"slug":"/computer/"}},
+    "staticQueryHashes": []}

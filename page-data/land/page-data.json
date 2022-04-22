@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-listing-js","path":"/land/","result":{"data":{"dataJson":{"description":"Experience breath taking views everyday with your own piece of land.","images":[{"alt":"land","src":"/img/land_1.jpg"},{"alt":"land","src":"/img/land_2.jpg"},{"alt":"land","src":"/img/land_3.jpg"}],"price":"$200,000","title":"Land For Sale","slug":"/land/"}},"pageContext":{"slug":"/land/"}},"staticQueryHashes":[]}
+{
+    "componentChunkName": "component---src-templates-listing-js",
+    "path": "/land/",
+    "result": {"data":{"dataJson":{"description":"Experience breath taking views everyday with your own piece of land.","images":[{"alt":"land","src":"/img/land_1.jpg"},{"alt":"land","src":"/img/land_2.jpg"},{"alt":"land","src":"/img/land_3.jpg"}],"price":"$200,000","title":"Land For Sale","slug":"/land/"}},"pageContext":{"slug":"/land/"}},
+    "staticQueryHashes": []}
