@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import * as styles from "./contact.module.css"
 
-export default () => {
+const Contact = () => {
   return (
     <div>
       <Helmet>
@@ -29,3 +29,5 @@ export default () => {
     </div>
   )
 }
+
+export default Contact

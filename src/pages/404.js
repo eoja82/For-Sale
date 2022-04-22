@@ -2,7 +2,7 @@ import React from "react"
 import * as styles from "./styles/404.module.css"
 import { Link } from "gatsby"
 
-export default () => {
+const NotFound = () => {
   return (
     <div>
       <div className={styles.notFoundContainer}>
@@ -13,3 +13,5 @@ export default () => {
     </div>
   )
 }
+
+export default NotFound

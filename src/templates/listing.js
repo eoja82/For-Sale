@@ -5,7 +5,7 @@ import Contact from "../components/contact.js"
 
 let imageIndex = 0
 
-export default ({ data }) => {
+const Listing = ({ data }) => {
   const images = data.dataJson.images,
         numImages = images.length,
         imgModal = useRef(null),
@@ -54,7 +54,7 @@ export default ({ data }) => {
       <Contact />
       <div className={styles.container}>
         <Link to="/">Home</Link>
-        <h1 id={styles.title}>{data.dataJson.title} - {data.dataJson.price}</h1>
+        <h1>{data.dataJson.title} - {data.dataJson.price}</h1>
         <div id={styles.mainImageContainer}>
           <div className={styles.imgNumber}>Image {imgNumber} of {numImages}</div>
           <button className={styles.mainImageBtn} onClick={openImgModal}>
@@ -102,3 +102,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Listing
