@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-listing-js",
-    "path": "/pets/",
-    "result": {"data":{"dataJson":{"description":"Bring joy into your life with a new pet.","images":[{"alt":"cat","src":"/img/pet_1.jpg"},{"alt":"rodent","src":"/img/pet_2.jpg"},{"alt":"antelope","src":"/img/pet_3.jpg"}],"price":"$100","title":"Pets For Adoption","slug":"/pets/"}},"pageContext":{"slug":"/pets/"}},
-    "staticQueryHashes": []}
+{"componentChunkName":"component---src-templates-listing-js","path":"/pets/","result":{"data":{"dataJson":{"description":"Bring joy into your life with a new pet.","images":[{"alt":"cat","src":"/img/pet_1.jpg"},{"alt":"rodent","src":"/img/pet_2.jpg"},{"alt":"antelope","src":"/img/pet_3.jpg"}],"price":"$100","title":"Pets For Adoption","slug":"/pets/"}},"pageContext":{"slug":"/pets/"}},"staticQueryHashes":[]}
