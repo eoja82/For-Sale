@@ -20,6 +20,7 @@
     "gatsby-source-filesystem": "^4.12.1",
     "gatsby-transformer-json": "^4.12.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0"
   },
