@@ -1,14 +1,4 @@
-/* .col {
-  padding-top: 12px;
-  padding-bottom: 12px;
-} */
-/* .cardImg {
-  width: 300px;
-  height: 225px;
-  object-fit: contain;
-  object-position: top;
-} */
-/* #listings {
+#listings {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -39,4 +29,4 @@
 .listingTitle {
   color: black;
   margin: .75em;
-} */
+}
