@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react"
 import { graphql, withPrefix, Link } from "gatsby"
 import * as styles from "./listing.module.css"
 import Contact from "../components/contact.js"
+import Layout from "../components/layout"
 
 let imageIndex = 0
 
@@ -50,7 +51,7 @@ const Listing = ({ data }) => {
   }
 
   return (
-    <div>
+    <Layout>
       <Contact />
       <div className={styles.container}>
         <Link to="/">Home</Link>
@@ -84,7 +85,7 @@ const Listing = ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 
