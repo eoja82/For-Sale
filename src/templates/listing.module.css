@@ -43,7 +43,7 @@ body {
 .container {
   max-width: var(--container-max-width);
   margin: var(--container-margin);
-  padding: .75rem
+  padding: .75rem;
 }
 #mainImageContainer {
   position: relative;
