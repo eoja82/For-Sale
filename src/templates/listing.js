@@ -40,6 +40,12 @@ const Listing = ({ data }) => {
           .modal-header.modalHeader {
             border: none;
           }
+          @media only screen and (min-width: 1200px) {
+            .modalContent {
+              max-width: 1200px;
+              margin: 0 auto;
+            }
+          }
         `}
       </style>
       <Contact />
@@ -86,7 +92,7 @@ const Listing = ({ data }) => {
         </Container>
         <p className="pt-2 fs-5">{description}</p>
       </Container>
-      <Modal show={showModal} fullscreen={true}>
+      <Modal show={showModal} fullscreen={true} dialogClassName="modalContent">
         <Modal.Header className="bg-dark modalHeader">
           <CloseButton variant="white" onClick={handleModal} />
         </Modal.Header>
