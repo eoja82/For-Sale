@@ -4,20 +4,18 @@ import * as styles from "./listing.module.css"
 import Contact from "../components/contact.js"
 import Layout from "../components/layout"
 import Carousel from "react-bootstrap/Carousel"
+import CloseButton from "react-bootstrap/CloseButton"
 import Container from "react-bootstrap/Container"
+import Modal from "react-bootstrap/Modal"
 
-let imageIndex = 0
 
 const Listing = ({ data }) => {
   const { description, images, price, title } = data.dataJson,
         numImages = images.length,
-        imgModal = useRef(null),
-        [image, setImage] = useState(images[imageIndex]),
         [imgNumber, setImageNumber] = useState(0),
         [controls, setControls] = useState(false),
+        [showModal, setShowModal] = useState(false),
         slideShow = useRef(null)
-  let touchStartX = 0,
-      touchEndX = 0
 
   function handleControls() {
     setControls(!controls)
@@ -31,38 +29,19 @@ const Listing = ({ data }) => {
     }
   }
 
-  function openImgModal() {
-    imgModal.current.style.display = "block"
-  }
-  function closeImgModal() {
-    imgModal.current.style.display = "none"
-  }
-  function previousSlide() {
-    imageIndex--
-    if (imageIndex < 0) imageIndex = numImages - 1
-    setImage(images[imageIndex])
-    setImageNumber(imageIndex)
-  }
-  function nextSlide() {
-    imageIndex++
-    if (imageIndex > numImages - 1) imageIndex = 0
-    setImage(images[imageIndex])
-    setImageNumber(imageIndex)
-  }
-  function touchStart(e) {
-    touchStartX = e.changedTouches[0].screenX
-  }
-  function touchEnd(e) {
-    touchEndX = e.changedTouches[0].screenX
-    handleGesture()
-  }
-  function handleGesture() {
-    if (touchEndX < touchStartX && Math.abs(touchEndX - touchStartX) > 20) nextSlide()
-    if (touchEndX > touchStartX && Math.abs(touchEndX - touchStartX) > 20) previousSlide()
+  function handleModal() {
+    setShowModal(!showModal)
   }
 
   return (
     <Layout>
+      <style>
+        {`
+          .modal-header.modalHeader {
+            border: none;
+          }
+        `}
+      </style>
       <Contact />
       <Container style={{marginTop: "60px"}}>
         <Link to="/">Home</Link>
@@ -86,12 +65,12 @@ const Listing = ({ data }) => {
                 alt={image.alt} 
                 className="d-block w-100" 
                 style={{objectFit: "contain", objectPosition: "top", cursor: "zoom-in"}}
-                onClick={openImgModal}
+                onClick={handleModal}
               />
               <Carousel.Caption 
                 className="position-absolute top-0 pt-1" 
-                style={{cursor: "zoom-in"}} 
-                onClick={openImgModal}
+                style={{cursor: "zoom-in"}}
+                onClick={handleModal}
               >
                 <p style={{visibility: controls ? "visible" : "hidden"}}>Image {i + 1} of {numImages}</p>
               </Carousel.Caption>
@@ -107,17 +86,37 @@ const Listing = ({ data }) => {
         </Container>
         <p className="pt-2 fs-5">{description}</p>
       </Container>
-      <div className={styles.container}>
-        <div id={styles.imgModalContainer} ref={imgModal}>
-          <div className={styles.modalContent}>
-            <span className={styles.closeModal} onClick={closeImgModal} onKeyDown={closeImgModal} role="button" tabIndex={0}>&times;</span>
-            <div className={styles.imgNumber}>Image {imgNumber + 1} of {numImages}</div>
-            <img className={styles.modalImg} src={withPrefix(image.src)} alt={image.alt} onTouchStart={touchStart} onTouchEnd={touchEnd}></img>
-            <button className={styles.previousImg} onClick={previousSlide}>&#10094;</button>
-            <button className={styles.nextImage} onClick={nextSlide}>&#10095;</button>
-          </div>
-        </div>
-      </div>
+      <Modal show={showModal} fullscreen={true}>
+        <Modal.Header className="bg-dark modalHeader">
+          <CloseButton variant="white" onClick={handleModal} />
+        </Modal.Header>
+        <Modal.Body className="bg-dark">
+          <Carousel
+            fade
+            interval={null}
+            indicators={false}
+            controls
+            ref={slideShow}
+            activeIndex={imgNumber}
+            onSelect={setActiveIndex}
+          >
+            {images.map( (image, i) => (
+              <Carousel.Item key={`image${i}`}>
+                <img 
+                  src={withPrefix(image.src)} 
+                  alt={image.alt} 
+                  className="d-block w-100" 
+                  style={{objectFit: "contain", objectPosition: "top"}}
+                />
+                <Carousel.Caption 
+                  className="position-absolute top-0 pt-1">
+                  <p>Image {i + 1} of {numImages}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </Modal.Body>
+      </Modal>
     </Layout>
   )
 }
