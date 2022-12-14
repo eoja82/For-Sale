@@ -28,11 +28,6 @@ const AllListings = () => {
     <Container>
       <style>
         {`
-          .card-img-top.cardImg {
-            width: 300px;
-            height: 225px;
-            object-fit: cover;
-          }
           .card-text.imgOverlay {
             top: 0;
             position: absolute;
@@ -45,17 +40,17 @@ const AllListings = () => {
           }
         `}
       </style>
-      <Row xs="auto" sm="auto" md="auto" lg="auto" xl="auto" xxl="auto" className="justify-content-center pb-5">
+      <Row xs="1" sm="2" md="2" lg="3" xl="4" xxl="4" className="pb-5">
         {listings.map( (listing, i) => (
           <Col key={i} className="g-4">
             <Link to={listing.slug} key={listing.slug}  className="text-dark text-decoration-none">
-              <Card className="shadow-sm rounded">
+              <Card className="shadow-sm rounded h-100">
                 <Card.Img variant="top" src={withPrefix(listing.images[0].src)} alt={listing.images[0].alt} className="cardImg" />
                 <Card.ImgOverlay>
                   <Card.Text className="imgOverlay p-1">{listing.price}</Card.Text>
                 </Card.ImgOverlay>
                 <Card.Body>
-                  <Card.Text className="fs-5">{`${listing.title} ${listing.price}`}</Card.Text>
+                  <Card.Text>{`${listing.title} ${listing.price}`}</Card.Text>
                 </Card.Body>
               </Card>
             </Link>
