@@ -6,7 +6,7 @@ import AllListings from "../components/allListings"
 const Index = () => {
   return (
     <Layout>
-      <h1 className="text-center mt-4 mb-4 fw-bold">My Stuff For Sale</h1>
+      <h1 className="text-center mt-4 mb-4 display-3">My Stuff For Sale</h1>
       <AllListings />
     </Layout>
   )
