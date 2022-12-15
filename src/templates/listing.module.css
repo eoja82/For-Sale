@@ -1,49 +1,22 @@
 :root {
-  --container-margin: 45px auto;
-  --modal-content-width: 800px;
-  --modal-content-height: 600px;
   --main-image-width: 600px;
   --main-image-height: 450px;
-  --container-max-width: 80%;
-  --controls-margin-top: -50px;
-  --controls-padding: 16px;
-  --imgNumber-padding: 8px 0;
 }
 @media only screen and (max-width: 770px) {
   :root {
-    --modal-content-width: 500px;
-    --modal-content-height: 375px;
     --main-image-width: 500px;
     --main-image-height: 375px;
   }
 }
-@media only screen and (max-height: 415px) {
-  :root {
-    --modal-content-width: 467px;
-    --modal-content-height: 350px;
-  }
-}
 @media only screen and (max-width: 570px) {
   :root {
-    --container-margin: 65px auto;
-    --modal-content-width: 300px;
-    --modal-content-height: 225px;
     --main-image-width: 300px;
     --main-image-height: 225px;
-    --container-max-width: 100%;
-    --controls-margin-top: -35px;
-    --controls-padding: 8px;
-    --imgNumber-padding: 4px 0;
   }
 }
 body {
   margin: 0;
   padding: 0;
-}
-.container {
-  max-width: var(--container-max-width);
-  margin: var(--container-margin);
-  padding: .75rem;
 }
 .carousel {
   width: var(--main-image-width);
@@ -71,92 +44,4 @@ body {
   max-height: 100%;
   margin: 0 auto;
   justify-content: center;
-}
-/* img modal */
-#imgModalContainer {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-}
-.modalContent {
-  position: relative;
-  background-color: rgb(240, 240, 240);
-  margin: auto;
-  padding: 0;
-  width: var(--modal-content-width);
-  height: var(--modal-content-height);
-  box-shadow: 0 0 10px black;
-}
-.closeModal {
-  cursor: pointer;
-  text-align: center;
-  background-color: rgb(240, 240, 240);
-  color: black;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: -15px;
-  right: -10px;
-  border: 2px solid black;
-  border-radius: 50%;
-  font-size: 25px;
-  font-weight: bold;
-  line-height: .95;
-  z-index: 10;
-}
-.modalImg {
-  display: flex;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0 auto;
-  justify-content: center;
-}
-.previousImg,
-.nextImage {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: var(--controls-padding);
-  margin-top: var(--controls-margin-top);
-  color: black;
-  background-color: rgba(240, 240, 240, 0.5);
-  font-weight: bold;
-  font-size: 20px;
-  border: none;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-.previousImg {
-  left: 0;
-}
-.nextImage {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.mainControl {
-  visibility: hidden;
-}
-@media (hover: hover) {
-  #mainImageContainer:hover .mainControl {
-    visibility: visible;
-  }
-}
-.imgNumber {
-  text-align: center;
-  color: black;
-  font-size: .9rem;
-  padding: var(--imgNumber-padding);
-  background-color: rgb(240, 240, 240, .5);
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
