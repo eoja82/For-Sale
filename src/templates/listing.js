@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import { graphql, withPrefix, Link } from "gatsby"
 import * as styles from "./listing.module.css"
 import Contact from "../components/contact.js"
@@ -15,10 +15,6 @@ const Listing = ({ data }) => {
         [imgNumber, setImageNumber] = useState(0),
         [controls, setControls] = useState(false),
         [showModal, setShowModal] = useState(false)
-
-  function handleControls() {
-    setControls(!controls)
-  }
 
   function setActiveIndex(e) {
     if (typeof e == "number") {
@@ -58,8 +54,8 @@ const Listing = ({ data }) => {
           controls={controls}
           activeIndex={imgNumber}
           onSelect={setActiveIndex}
-          onMouseEnter={handleControls}
-          onMouseLeave={handleControls}
+          onMouseOver={() => setControls(true)}
+          onMouseLeave={() => setControls(false)}
           className={styles.carousel + " mb-2"}
         >
           {images.map( (image, i) => (
