@@ -14,8 +14,7 @@ const Listing = ({ data }) => {
         numImages = images.length,
         [imgNumber, setImageNumber] = useState(0),
         [controls, setControls] = useState(false),
-        [showModal, setShowModal] = useState(false),
-        slideShow = useRef(null)
+        [showModal, setShowModal] = useState(false)
 
   function handleControls() {
     setControls(!controls)
@@ -57,7 +56,6 @@ const Listing = ({ data }) => {
           interval={null}
           indicators={false}
           controls={controls}
-          ref={slideShow}
           activeIndex={imgNumber}
           onSelect={setActiveIndex}
           onMouseEnter={handleControls}
@@ -102,7 +100,6 @@ const Listing = ({ data }) => {
             interval={null}
             indicators={false}
             controls
-            ref={slideShow}
             activeIndex={imgNumber}
             onSelect={setActiveIndex}
           >
