@@ -10,7 +10,7 @@
 }
 @media only screen and (max-width: 570px) {
   .carousel {
-    --carousel-width: 95vw;
+    --carousel-width: 100%;
     --carousel-height: calc(.75 * 95vw);
   }
 }
