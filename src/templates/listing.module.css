@@ -1,17 +1,17 @@
-:root {
-  --main-image-width: 600px;
-  --main-image-height: 450px;
+.carousel {
+  --carousel-width: 600px;
+  --carousel-height: 450px;
 }
 @media only screen and (max-width: 770px) {
-  :root {
-    --main-image-width: 500px;
-    --main-image-height: 375px;
+  .carousel {
+    --carousel-width: 500px;
+    --carousel-height: 375px;
   }
 }
 @media only screen and (max-width: 570px) {
-  :root {
-    --main-image-width: 300px;
-    --main-image-height: 225px;
+  .carousel {
+    --carousel-width: 95vw;
+    --carousel-height: calc(.75 * 95vw);
   }
 }
 body {
@@ -19,8 +19,8 @@ body {
   padding: 0;
 }
 .carousel {
-  width: var(--main-image-width);
-  height: var(--main-image-height);
+  width: var(--carousel-width);
+  height: var(--carousel-height);
 }
 #thumbnailContainer {
   display: flex;
